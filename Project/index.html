@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A To-Do List</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row my-5 align-items-center">
+            <div class="col-3">
+                <img src="images/logo.png" alt="my_logo" width="196px">
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-primary" onclick="showFormOnScreen(false)">Добавить новую задачу</button>
+            </div>
+            <div class="col-5">
+                <h5>Image Links To Test</h5>
+                <p>https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg</p>
+                <p>https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg</p>
+                <p>https://s.clipartkey.com/mpngs/s/32-320874_monarch-butterfly-clipart-real-butterfly-monarch-butterfly-no.png</p>
+            </div>
+        </div>
+
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="taskTitle">Название задачи</label>
+                <input type="text" class="form-control" id="taskTitle">
+            </div>
+            <div class="form-group">
+                <label for="taskTitle">URL картинки</label>
+                <input type="text" class="form-control" id="taskImgUrl">
+            </div>
+            <div class="form-group">
+                <label for="taskDescription">Описание задачи</label>
+                <textarea class="form-control" id="taskDescription"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="taskType">Тип задачи</label>
+                <select id="taskType" class="form-control">
+                    <option value="1">Высокий приоритет</option>
+                    <option value="2">Средний приоритет</option>
+                    <option value="3">Низкий приоритет</option>
+                </select>
+            </div>
+
+            <div id="action-button-container">
+                <button type="button" class="btn btn-primary" onclick="addTaskFormSubmit()">Добавить</button>
+                <button type="button" class="btn btn-danger" onclick="hideFormFromScreen()">Отменить</button>
+            </div>
+
+        </form>
+
+        <div class="row mt-5" id="task-container">
+            <div class="col-12 mt-5 text-center">
+                <p>Список задач пуст</p>
+            </div>
+        </div>
+    </div>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

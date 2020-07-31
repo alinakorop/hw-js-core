@@ -1,0 +1,22 @@
+#taskForm {
+    display: none;
+}
+
+.tag {
+    width: 32px;
+    height: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.delete-button {
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+}
+
+.edit-button {
+    color: blue;
+    cursor: pointer;
+    margin-right: 10px;
+}
